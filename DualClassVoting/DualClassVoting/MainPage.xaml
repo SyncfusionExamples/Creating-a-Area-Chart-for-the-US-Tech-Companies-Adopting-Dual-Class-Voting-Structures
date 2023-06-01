@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:DualClassVoting"
+             x:Class="DualClassVoting.MainPage">
+
+    <ContentPage.BindingContext>
+        <model:DualClassVotingPercentage/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <Border Padding="10,0,10,10"   StrokeShape="RoundRectangle 10" Margin="30" Background="#0A121F">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Grid.ColumnSpan="2" StrokeShape="RoundRectangle 8" WidthRequest="220" BackgroundColor="#13243E" Stroke="#13243E">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="VISUAL CAPITALIST" Margin="8,4,0,4" TextColor="#CED2D3" FontSize="Caption" FontAttributes="Bold" />
+                        <Label Text="DATASTREAM" Margin="8,4,0,4" TextColor="#1DA6B0" FontSize="Caption"  FontAttributes="Bold"/>
+                    </StackLayout>
+                </Border>
+
+                <StackLayout  Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" Margin="{OnPlatform Android='40,10,0,-10',iOS='40,10,0,-10',Default='40,10,0,-20'}">
+                    <Label Text="% of Dual Class" TextColor="#FFFFFF" FontSize="12"/>
+                </StackLayout>
+
+                <!--#region Chart 1 -->
+
+                <chart:SfCartesianChart Grid.Row="2" Grid.Column="0" IsTransposed="True" Margin="{OnPlatform WinUI='0,30,0,0',MacCatalyst='0,30,0,0'}">
+
+                    <chart:SfCartesianChart.XAxes>
+                        <chart:CategoryAxis IsInversed="True" Interval="{OnPlatform Android=10,iOS=10,Default=5}" ShowMajorGridLines="False" IsVisible="False" PlotOffsetEnd="5">
+                        </chart:CategoryAxis>
+                    </chart:SfCartesianChart.XAxes>
+
+                    <chart:SfCartesianChart.YAxes>
+                        <chart:NumericalAxis IsInversed="True" CrossesAt="{Static x:Double.MaxValue}" PlotOffsetStart="20" PlotOffsetEnd="10" Interval="5">
+                            <chart:NumericalAxis.LabelStyle>
+                                <chart:ChartAxisLabelStyle TextColor="#FFFFFF" LabelFormat="0'%"/>
+                            </chart:NumericalAxis.LabelStyle>
+                            <chart:NumericalAxis.AxisLineStyle>
+                                <chart:ChartLineStyle StrokeWidth ="0"/>
+                            </chart:NumericalAxis.AxisLineStyle>
+                            <chart:NumericalAxis.MajorGridLineStyle>
+                                <chart:ChartLineStyle StrokeWidth="0.3"/>
+                            </chart:NumericalAxis.MajorGridLineStyle>
+                            <chart:NumericalAxis.MajorTickStyle>
+                                <chart:ChartAxisTickStyle StrokeWidth="0.3"/>
+                            </chart:NumericalAxis.MajorTickStyle>
+                        </chart:NumericalAxis>
+                    </chart:SfCartesianChart.YAxes>
+
+                    <chart:AreaSeries ItemsSource="{Binding VotingPercentage}" XBindingPath="Year" YBindingPath="NonTechPercentage" Fill="#1DA6B0"/>
+
+                    <chart:SfCartesianChart.PlotAreaBackgroundView>
+                        <AbsoluteLayout>
+                            <StackLayout  AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="{OnPlatform Android='0,0,-1,-1',iOS='0,0,-1,-1',Default='0.07,0,-1,-1'}" >
+                                <Label Text="THE RISE OF" TextColor="#CED2D3" FontAttributes="Italic" FontSize="{OnPlatform Android=12,iOS=12}"/>
+                                <Label Text="DUAL" TextColor="#AFB433" FontAttributes="Bold,Italic" FontSize="{OnPlatform Android=Large,iOS=Large,Default=Header}" 
+                                       Margin="{OnPlatform Android='0,-2,0,-2',iOS='0,-2,0,-2',Default='-10,-10,0,-10'}"/>
+                                <Label Text="CLASS" TextColor="#FFFFFF" FontAttributes="Bold,Italic" FontSize="{OnPlatform Android=Large,iOS=Large,Default=Header}" 
+                                       Margin="{OnPlatform Android='0,-2,0,-2',iOS='0,-2,0,-2',Default='-10,-10,0,-8'}"/>
+                                <Label Text="SHARE STRUCTURES" TextColor="#CED2D3" FontAttributes="Italic" FontSize="{OnPlatform Android=12,iOS=12}"/>
+                            </StackLayout>
+                            <Label AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="{OnPlatform Android='0,0.6,-1,-1',iOS='0,0.6,-1,-1',Default='0.07,0.4,-1,-1'}"
+                                   Text="NON-TECH IPOS" TextColor="#1DA6B0" FontAttributes="Bold" FontSize="{OnPlatform Android=12,iOS=12,Default=Subtitle}"/>
+                        </AbsoluteLayout>
+                    </chart:SfCartesianChart.PlotAreaBackgroundView>
+
+                </chart:SfCartesianChart>
+
+                <!--#endregion-->
+
+                <!--#region Chart 2 -->
+
+                <chart:SfCartesianChart  Grid.Row="2" Grid.Column="1" IsTransposed="True" Margin="{OnPlatform WinUI='0,30,0,0',MacCatalyst='0,30,0,0'}">
+
+                    <chart:SfCartesianChart.XAxes >
+                        <chart:CategoryAxis IsInversed="True" Interval="{OnPlatform Android=10,iOS=10,Default=5}" PlotOffsetEnd="5" ShowMajorGridLines="False">
+                            <chart:CategoryAxis.LabelStyle>
+                                <chart:ChartAxisLabelStyle TextColor="#FFFFFF"/>
+                            </chart:CategoryAxis.LabelStyle>
+                            <chart:CategoryAxis.MajorTickStyle>
+                                <chart:ChartAxisTickStyle StrokeWidth="0"/>
+                            </chart:CategoryAxis.MajorTickStyle>
+                            <chart:CategoryAxis.AxisLineStyle>
+                                <chart:ChartLineStyle StrokeWidth ="0"/>
+                            </chart:CategoryAxis.AxisLineStyle>
+                        </chart:CategoryAxis>
+                    </chart:SfCartesianChart.XAxes>
+
+                    <chart:SfCartesianChart.YAxes>
+                        <chart:NumericalAxis CrossesAt="{Static x:Double.MaxValue}" PlotOffsetEnd="20" ShowMajorGridLines="True" Interval="10">
+                            <chart:NumericalAxis.LabelStyle>
+                                <chart:ChartAxisLabelStyle TextColor="#FFFFFF" LabelFormat="0'%"/>
+                            </chart:NumericalAxis.LabelStyle>
+                            <chart:NumericalAxis.AxisLineStyle>
+                                <chart:ChartLineStyle StrokeWidth ="0"/>
+                            </chart:NumericalAxis.AxisLineStyle>
+                            <chart:NumericalAxis.MajorGridLineStyle>
+                                <chart:ChartLineStyle StrokeWidth="0.3"/>
+                            </chart:NumericalAxis.MajorGridLineStyle>
+                            <chart:NumericalAxis.MajorTickStyle>
+                                <chart:ChartAxisTickStyle StrokeWidth="0.3"/>
+                            </chart:NumericalAxis.MajorTickStyle>
+                        </chart:NumericalAxis>
+                    </chart:SfCartesianChart.YAxes>
+
+                    <chart:AreaSeries ItemsSource="{Binding VotingPercentage}" XBindingPath="Year" YBindingPath="TechPercentage" Fill="#AFB433"/>
+
+                    <chart:SfCartesianChart.PlotAreaBackgroundView>
+                        <AbsoluteLayout>
+                            <Label AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="{OnPlatform Android='0.5,0.6,-1,-1',iOS='0.5,0.6,-1,-1',Default='0.5,0.4,-1,-1'}"
+                                   Text="TECH IPOS" TextColor="#AFB433" FontAttributes="Bold" FontSize="{OnPlatform Android=12,iOS=12,Default=Subtitle}"/>
+                        </AbsoluteLayout>
+                    </chart:SfCartesianChart.PlotAreaBackgroundView>
+
+                </chart:SfCartesianChart>
+
+                <!--#endregion-->
+
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" Margin="40,0,0,0">
+                    <Label Text="% of Dual Class" TextColor="#FFFFFF" FontSize="12"/>
+                </StackLayout>
+
+            </Grid>
+        </Border>
+    </ContentPage.Content>
+</ContentPage>
