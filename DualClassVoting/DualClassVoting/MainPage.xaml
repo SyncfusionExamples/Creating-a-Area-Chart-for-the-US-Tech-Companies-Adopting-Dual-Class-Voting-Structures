@@ -68,12 +68,12 @@
                     <chart:SfCartesianChart.PlotAreaBackgroundView>
                         <AbsoluteLayout>
                             <StackLayout  AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="{OnPlatform Android='0,0,-1,-1',iOS='0,0,-1,-1',Default='0.07,0,-1,-1'}" >
-                                <Label Text="THE RISE OF" TextColor="#CED2D3" FontAttributes="Italic" FontSize="{OnPlatform Android=12,iOS=12}"/>
-                                <Label Text="DUAL" TextColor="#AFB433" FontAttributes="Bold,Italic" FontSize="{OnPlatform Android=Large,iOS=Large,Default=Header}" 
-                                       Margin="{OnPlatform Android='0,-2,0,-2',iOS='0,-2,0,-2',Default='-10,-10,0,-10'}"/>
-                                <Label Text="CLASS" TextColor="#FFFFFF" FontAttributes="Bold,Italic" FontSize="{OnPlatform Android=Large,iOS=Large,Default=Header}" 
-                                       Margin="{OnPlatform Android='0,-2,0,-2',iOS='0,-2,0,-2',Default='-10,-10,0,-8'}"/>
-                                <Label Text="SHARE STRUCTURES" TextColor="#CED2D3" FontAttributes="Italic" FontSize="{OnPlatform Android=12,iOS=12}"/>
+                                <Label Text="THE RISE OF" TextColor="#CED2D3" FontAttributes="Italic" FontSize="{OnPlatform Android=10,iOS=10}"/>
+                                <Label Text="DUAL" TextColor="#AFB433" FontAttributes="Bold,Italic" FontSize="{OnPlatform WinUI=Header,Default=Large}" 
+                                       Margin="{OnPlatform WinUI='-10,-10,0,-10',Default='-2,-2,0,-2'}"/>
+                                <Label Text="CLASS" TextColor="#FFFFFF" FontAttributes="Bold,Italic" FontSize="{OnPlatform WinUI=Header,Default=Large}" 
+                                       Margin="{OnPlatform WinUI='-10,-10,0,-8',Default='-2,-2,0,-2'}"/>
+                                <Label Text="SHARE STRUCTURES" TextColor="#CED2D3" FontAttributes="Italic" FontSize="{OnPlatform Android=10,iOS=10}"/>
                             </StackLayout>
                             <Label AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="{OnPlatform Android='0,0.6,-1,-1',iOS='0,0.6,-1,-1',Default='0.07,0.4,-1,-1'}"
                                    Text="NON-TECH IPOS" TextColor="#1DA6B0" FontAttributes="Bold" FontSize="{OnPlatform Android=12,iOS=12,Default=Subtitle}"/>
