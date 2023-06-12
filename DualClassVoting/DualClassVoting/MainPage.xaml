@@ -12,7 +12,7 @@
     <ContentPage.Content>
 
         <Border  StrokeShape="RoundRectangle 10" Margin="30">
-            <Grid BackgroundColor="Black">
+            <Grid BackgroundColor="#031a33">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -23,40 +23,37 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
+                
+                <Label  Grid.Row="0" Grid.ColumnSpan="2" Text="Dual Class Structure of IPOs" TextColor="#FFFFFF" FontSize="Medium"  HorizontalOptions="Center"/>
 
                 <!--#region Chart 1 -->
-                <Label  Grid.Row="0" Grid.ColumnSpan="2" Text="Dual Class Structure of IPOs" FontSize="Small" TextColor="White" HorizontalOptions="Center"/>
-
                 <chart:SfCartesianChart Grid.Row="1" Grid.Column="0" IsTransposed="True" Margin="{OnPlatform WinUI='0,20,0,0',MacCatalyst='0,20,0,0'}">
 
                     <chart:SfCartesianChart.XAxes>
-                        <chart:CategoryAxis IsInversed="True" Interval="{OnPlatform Android=10,iOS=10,Default=5}" ShowMajorGridLines="False" PlotOffsetEnd="5" IsVisible="False">
-                            <chart:CategoryAxis.LabelStyle>
-                                <chart:ChartAxisLabelStyle FontSize="1"/>
-                            </chart:CategoryAxis.LabelStyle>
-                            <!--<chart:CategoryAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle StrokeWidth="0"/>
-                            </chart:CategoryAxis.MajorTickStyle>-->
-                            <chart:CategoryAxis.AxisLineStyle>
+                        <chart:NumericalAxis IsInversed="True" Interval="{OnPlatform Android=10,iOS=10,Default=5}" ShowMajorGridLines="False" PlotOffsetEnd="5" 
+                                             MinorTicksPerInterval="5" ShowMinorGridLines="False">
+                            <chart:NumericalAxis.LabelStyle>
+                                <chart:ChartAxisLabelStyle TextColor="Transparent" FontSize="1" Margin="0,0,-5,0"/>
+                            </chart:NumericalAxis.LabelStyle>
+                            <chart:NumericalAxis.AxisLineStyle>
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
-                            </chart:CategoryAxis.AxisLineStyle>
-                       
-                        </chart:CategoryAxis>
+                            </chart:NumericalAxis.AxisLineStyle>
+                        </chart:NumericalAxis>
                     </chart:SfCartesianChart.XAxes>
 
                     <chart:SfCartesianChart.YAxes>
-                        <chart:NumericalAxis IsInversed="True" CrossesAt="{Static x:Double.MaxValue}" PlotOffsetStart="20" PlotOffsetEnd="10" Interval="5">
+                        <chart:NumericalAxis IsInversed="True" CrossesAt="{Static x:Double.MaxValue}" PlotOffsetStart="20" Interval="5">
                             <chart:NumericalAxis.LabelStyle>
-                                <chart:ChartAxisLabelStyle TextColor="White" LabelFormat="0'%"/>
+                                <chart:ChartAxisLabelStyle LabelFormat="0'%" TextColor="#FFFFFF"/>
                             </chart:NumericalAxis.LabelStyle>
                             <chart:NumericalAxis.AxisLineStyle>
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
                             </chart:NumericalAxis.AxisLineStyle>
                             <chart:NumericalAxis.MajorGridLineStyle>
-                                <chart:ChartLineStyle StrokeWidth="0.8"/>
+                                <chart:ChartLineStyle StrokeWidth="0.3"/>
                             </chart:NumericalAxis.MajorGridLineStyle>
                             <chart:NumericalAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle StrokeWidth="0.8"/>
+                                <chart:ChartAxisTickStyle StrokeWidth="0.3"/>
                             </chart:NumericalAxis.MajorTickStyle>
                         </chart:NumericalAxis>
                     </chart:SfCartesianChart.YAxes>
@@ -72,32 +69,30 @@
                 <chart:SfCartesianChart  Grid.Row="1" Grid.Column="1" IsTransposed="True" Margin="{OnPlatform WinUI='0,20,0,0',MacCatalyst='0,20,0,0'}">
 
                     <chart:SfCartesianChart.XAxes >
-                        <chart:CategoryAxis IsInversed="True" Interval="{OnPlatform Android=10,iOS=10,Default=5}" PlotOffsetEnd="5" ShowMajorGridLines="False">
-                            <chart:CategoryAxis.LabelStyle>
-                                <chart:ChartAxisLabelStyle TextColor="White"/>
-                            </chart:CategoryAxis.LabelStyle>
-                            <chart:CategoryAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle StrokeWidth="0"/>
-                            </chart:CategoryAxis.MajorTickStyle>
-                            <chart:CategoryAxis.AxisLineStyle>
+                        <chart:NumericalAxis IsInversed="True" Interval="{OnPlatform Android=10,iOS=10,Default=5}" PlotOffsetEnd="5" ShowMajorGridLines="False"
+                                             MinorTicksPerInterval="5" ShowMinorGridLines="False">
+                            <chart:NumericalAxis.LabelStyle>
+                                <chart:ChartAxisLabelStyle TextColor="#FFFFFF"/>
+                            </chart:NumericalAxis.LabelStyle>
+                            <chart:NumericalAxis.AxisLineStyle>
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
-                            </chart:CategoryAxis.AxisLineStyle>
-                        </chart:CategoryAxis>
+                            </chart:NumericalAxis.AxisLineStyle>
+                        </chart:NumericalAxis>
                     </chart:SfCartesianChart.XAxes>
 
                     <chart:SfCartesianChart.YAxes>
                         <chart:NumericalAxis CrossesAt="{Static x:Double.MaxValue}" PlotOffsetEnd="20" Interval="10">
                             <chart:NumericalAxis.LabelStyle>
-                                <chart:ChartAxisLabelStyle TextColor="White" LabelFormat="0'%"/>
+                                <chart:ChartAxisLabelStyle  LabelFormat="0'%" TextColor="#FFFFFF"/>
                             </chart:NumericalAxis.LabelStyle>
                             <chart:NumericalAxis.AxisLineStyle>
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
                             </chart:NumericalAxis.AxisLineStyle>
                             <chart:NumericalAxis.MajorGridLineStyle>
-                                <chart:ChartLineStyle StrokeWidth="0.8"/>
+                                <chart:ChartLineStyle StrokeWidth="0.3"/>
                             </chart:NumericalAxis.MajorGridLineStyle>
                             <chart:NumericalAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle StrokeWidth="0.8"/>
+                                <chart:ChartAxisTickStyle StrokeWidth="0.3"/>
                             </chart:NumericalAxis.MajorTickStyle>
                         </chart:NumericalAxis>
                     </chart:SfCartesianChart.YAxes>
@@ -109,14 +104,11 @@
 
                 <!--#endregion-->
                 
-                <AbsoluteLayout  Grid.Row="2" Grid.ColumnSpan="2">
-                    <Label Text="NON-TECH" TextColor="#A13DDF" FontSize="12" FontAttributes="Bold" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.19,0.2,-1,-1"/>
-                    <Label Text="% of Dual Class" TextColor="White" FontSize="12" FontAttributes="Bold" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.53,0.2,-1,-1"/>
-                    <Label Text="TECH" TextColor="#EFD02B" FontSize="12" FontAttributes="Bold"  AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.81,0.2,-1,-1"/>
-
+                <AbsoluteLayout  Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5,0,0">
+                    <Label Text="NON-TECH" TextColor="#A13DDF" FontSize="{OnPlatform Android=13,iOS=13,Default=15}" FontAttributes="Bold" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.19,0.2,-1,-1"/>
+                    <Label Text="% of Dual Class" TextColor="#FFFFFF"  FontSize="{OnPlatform Android=14,iOS=14,Default=16}" FontAttributes="Bold" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.53,0.2,-1,-1"/>
+                    <Label Text="TECH" TextColor="#EFD02B" FontSize="{OnPlatform Android=13,iOS=13,Default=15}" FontAttributes="Bold"  AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.81,0.2,-1,-1"/>
                 </AbsoluteLayout>
-                
-             
 
             </Grid>
         </Border>
