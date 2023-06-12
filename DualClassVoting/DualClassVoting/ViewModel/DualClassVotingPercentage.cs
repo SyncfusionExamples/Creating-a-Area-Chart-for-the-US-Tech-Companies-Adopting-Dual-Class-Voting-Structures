@@ -34,7 +34,7 @@ namespace DualClassVoting
             return lines.Select(line =>
             {
                 string[] data = line.Split(',');
-                return new DualVotingModel(Convert.ToDouble(data[0]), Convert.ToDouble(data[1]), Convert.ToDouble(data[2]));
+                return new DualVotingModel(Convert.ToInt32(data[0]), Convert.ToDouble(data[1]), Convert.ToDouble(data[2]));
             });
         }
     }
