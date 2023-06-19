@@ -113,7 +113,7 @@
                 </chart:SfCartesianChart>
 
                 <!--#endregion-->
-                
+
                 <AbsoluteLayout Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5,0,0">
                     <Label Text="NON-TECH" TextColor="#F247CC" FontSize="12" FontAttributes="Bold" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.19,0.2,-1,-1"/>
                     <Label Text="% of Dual Class" TextColor="#374151" FontSize="13" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.52,0.2,-1,-1"/>
@@ -124,15 +124,3 @@
         </Border>
     </ContentPage.Content>
 </ContentPage>
-
-
-
-
-
-
-
-
-
-
-
-
