@@ -12,7 +12,7 @@
     <ContentPage.Content>
 
         <Border  StrokeShape="RoundRectangle 10" Margin="30">
-            <Grid Background="#DBDBDB">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -24,7 +24,7 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Dual Class Structure of IPOs" TextColor="#374151" FontSize="16" HorizontalOptions="Center"/>
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Text="Dual Class Structure of IPOs" TextColor="#374151" FontSize="16" FontAttributes="Bold" HorizontalOptions="Center"/>
 
                 <!--#region Chart 1 -->
                 <chart:SfCartesianChart Grid.Row="1" Grid.Column="0" IsTransposed="True" Margin="{OnPlatform Android=0,Default='0,20,0,0'}">
@@ -38,10 +38,10 @@
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
                             </chart:NumericalAxis.AxisLineStyle>
                             <chart:NumericalAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle Stroke="#b0b3b8"/>
+                                <chart:ChartAxisTickStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MajorTickStyle>
                             <chart:NumericalAxis.MinorTickStyle>
-                                <chart:ChartAxisTickStyle Stroke="#b0b3b8"/>
+                                <chart:ChartAxisTickStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MinorTickStyle>
                         </chart:NumericalAxis>
                     </chart:SfCartesianChart.XAxes>
@@ -55,10 +55,10 @@
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
                             </chart:NumericalAxis.AxisLineStyle>
                             <chart:NumericalAxis.MajorGridLineStyle>
-                                <chart:ChartLineStyle Stroke="#b0b3b8"/>
+                                <chart:ChartLineStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MajorGridLineStyle>
                             <chart:NumericalAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle Stroke="#b0b3b8"/>
+                                <chart:ChartAxisTickStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MajorTickStyle>
                         </chart:NumericalAxis>
                     </chart:SfCartesianChart.YAxes>
@@ -83,10 +83,10 @@
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
                             </chart:NumericalAxis.AxisLineStyle>
                             <chart:NumericalAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle Stroke="#b0b3b8"/>
+                                <chart:ChartAxisTickStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MajorTickStyle>
                             <chart:NumericalAxis.MinorTickStyle>
-                                <chart:ChartAxisTickStyle Stroke="#b0b3b8"/>
+                                <chart:ChartAxisTickStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MinorTickStyle>
                         </chart:NumericalAxis>
                     </chart:SfCartesianChart.XAxes>
@@ -100,10 +100,10 @@
                                 <chart:ChartLineStyle StrokeWidth ="0"/>
                             </chart:NumericalAxis.AxisLineStyle>
                             <chart:NumericalAxis.MajorGridLineStyle>
-                                <chart:ChartLineStyle Stroke="#b0b3b8"/>
+                                <chart:ChartLineStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MajorGridLineStyle>
                             <chart:NumericalAxis.MajorTickStyle>
-                                <chart:ChartAxisTickStyle Stroke="#b0b3b8"/>
+                                <chart:ChartAxisTickStyle Stroke="#C5C8CE"/>
                             </chart:NumericalAxis.MajorTickStyle>
                         </chart:NumericalAxis>
                     </chart:SfCartesianChart.YAxes>
