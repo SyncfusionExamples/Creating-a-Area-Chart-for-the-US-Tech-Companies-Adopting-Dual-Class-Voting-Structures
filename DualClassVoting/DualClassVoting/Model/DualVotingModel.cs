@@ -8,11 +8,11 @@ namespace DualClassVoting.Model
 {
     public class DualVotingModel
     {
-        public double Year { get; set; }
+        public int Year { get; set; }
         public double TechPercentage { get; set; }
         public double NonTechPercentage { get; set; }
 
-        public DualVotingModel(double year, double techPercentage, double nonTechPercentage)
+        public DualVotingModel(int year, double techPercentage, double nonTechPercentage)
         {
             Year = year;
             TechPercentage = techPercentage;
