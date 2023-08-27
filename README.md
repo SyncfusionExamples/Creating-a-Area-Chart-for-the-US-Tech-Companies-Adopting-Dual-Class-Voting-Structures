@@ -1,4 +1,5 @@
-[Area chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts/chart-types/maui-area-chart) used to represent the quantitative values of different categories over a continuous interval. It is particularly effective for displaying trends and patterns in data that change over time or across a continuous variable.
+# Creating a Area Chart for the US Tech Companies Adopting Dual Class Voting Structures
+[Area chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts/chart-types/maui-area-chart) is used to represent the quantitative values of different categories over a continuous interval. It is particularly effective for displaying trends and patterns in data that change over time or across a continuous variable.
 
 This sample demonstrates how to represent a dual-class voting structure by utilizing a .NET MAUI Area Chart.
 
