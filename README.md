@@ -1,4 +1,10 @@
 # Creating a Area Chart for the US Tech Companies Adopting Dual Class Voting Structures
+
+## Troubleshooting
+#### Path too long exception
+If you are facing path too long exception when building this example project, close Visual Studio and rename the repository to short and build the project.
+
+## Description
 [Area chart](https://www.syncfusion.com/maui-controls/maui-cartesian-charts/chart-types/maui-area-chart) is used to represent the quantitative values of different categories over a continuous interval. It is particularly effective for displaying trends and patterns in data that change over time or across a continuous variable.
 
 This sample demonstrates how to represent a dual-class voting structure by utilizing a .NET MAUI Area Chart.
