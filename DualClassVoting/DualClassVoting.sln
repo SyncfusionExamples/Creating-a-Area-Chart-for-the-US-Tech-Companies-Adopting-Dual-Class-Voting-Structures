@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DualClassVoting", "DualClassVoting\DualClassVoting.csproj", "{0E646A1C-037A-4BD5-8015-D603F18C477E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DualClassVoting", "DualClassVoting\DualClassVoting.csproj", "{824666F2-0BFA-4D55-B065-1A80E8139498}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,17 +11,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0E646A1C-037A-4BD5-8015-D603F18C477E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E646A1C-037A-4BD5-8015-D603F18C477E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E646A1C-037A-4BD5-8015-D603F18C477E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{0E646A1C-037A-4BD5-8015-D603F18C477E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E646A1C-037A-4BD5-8015-D603F18C477E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E646A1C-037A-4BD5-8015-D603F18C477E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{824666F2-0BFA-4D55-B065-1A80E8139498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824666F2-0BFA-4D55-B065-1A80E8139498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824666F2-0BFA-4D55-B065-1A80E8139498}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{824666F2-0BFA-4D55-B065-1A80E8139498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824666F2-0BFA-4D55-B065-1A80E8139498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824666F2-0BFA-4D55-B065-1A80E8139498}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BA75030C-622C-4CD1-86C7-179011AD1267}
+		SolutionGuid = {C9FAF300-394D-4233-BE31-E0A79EEEF52C}
 	EndGlobalSection
 EndGlobal
