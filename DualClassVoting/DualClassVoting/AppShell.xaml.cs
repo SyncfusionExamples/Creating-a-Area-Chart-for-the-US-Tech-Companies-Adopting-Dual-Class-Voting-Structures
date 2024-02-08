@@ -1,9 +1,10 @@
-﻿namespace DualClassVoting;
-
-public partial class AppShell : Shell
+﻿namespace DualClassVoting
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
